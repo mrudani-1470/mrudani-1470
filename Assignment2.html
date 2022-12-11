@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edyoda Assignment 2</title>
+</head>
+<style>
+    #logo {
+        width: 130px;
+        font-size: 32px;
+        color: #0084ff;
+        /* font-weight: 800; */
+    }
+
+    #logostories {
+        Margin: 0;
+        font-weight: 500;
+        font: Raleway;
+        font-style: italic;
+    }
+
+    .navbar {
+        padding: 16px 78px;
+        background-color: #fff;
+        border-top: 1px solid lightgrey;
+        border-bottom: 1px solid lightgrey;
+        overflow: hidden;
+
+        top: 0;
+
+    }
+
+    .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        /* text-align: center;
+        padding: 14px 16px;
+        text-decoration: none; */
+    }
+
+    .logos {
+        float: left;
+    }
+
+    .dropdown {
+        float: left;
+        color: #000;
+        padding: auto;
+        margin: auto;
+        padding-left: 60px;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: #000;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        position: fixed;
+    }
+
+    .dropdownicon {
+        padding-top: 0px;
+        padding-left: 8px;
+    }
+
+    main {
+        font-family: Raleway, sans-serif;
+        margin-top: 120px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0px 160px;
+        width: auto;
+    }
+
+    #heading {
+        color: #000;
+        font-weight: 600;
+        margin: 0px;
+
+    }
+
+    #filtertext {
+        font-size: 14px;
+        font-weight: 600;
+        margin-left: 8px;
+    }
+
+    .myDIV {
+        margin-bottom: 20px;
+        font-size: 16px;
+        padding-top: 16px;
+    }
+
+    .btn {
+        padding: 6px 14px;
+        width: auto;
+        color: #0084ff;
+        border-radius: 15px;
+        border: 1px solid #0084ff;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .active,
+    .btn:hover {
+        background-color: #0084ff;
+        color: rgb(223, 187, 187);
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+
+
+
+    .card-wrapper {
+        width: 80%;
+        margin: auto;
+    }
+
+    .card-container {
+
+        width: 32%;
+        float: left;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-color: #000;
+        box-sizing: border-box;
+
+    }
+
+    .card-content {
+        padding: 16px 24px;
+    }
+
+    .card-img {
+        width: 100%;
+        height: 176px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .card-author {
+        color: #0096ff;
+        font-size: 14px;
+        font-style: Italic;
+        font-weight: 500;
+    }
+
+    .card-date {
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .card-title {
+        font-size: 18px;
+        text-align: left;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .card-desc {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.43;
+        color: rgba(0, 0, 0, 0.6);
+        margin: 6px 0;
+    }
+
+
+
+    footer {
+        background-color: #172146;
+        Padding: 80px 16%;
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <div class="logos">
+            <strong id="logo">EDYODA</strong><br />
+            <i id="logostories">Stories</i>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Explore Categories
+                <img class="dropdownicon" alt="Dropdown Icon"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAGCAYAAAD37n+BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHhJREFUeNpiYGBguAPE/f///2fAh0FqgPguiBEDxC+BeDUQM2NRyAyVewlWCxW0B+L7QHwAiHmRFPNCxUBy9mAxJElVIL4MxBeBWB6KL0LFVOHq0KwXAuJDQHwPikFsIWQ1jFCFcMDIyMgGpFZAuRFA+V/I8gABBgD8EGd4shdx5wAAAABJRU5ErkJggg==">
+            </button>
+        </div>
+    </div>
+    <main>
+        <h1 id="heading">Trending Posts</h1><br />
+        <i class="fa fa-filter" style="font-size:18px; color:#4072bd"></i>
+        <strong id="filtertext">Filter By Category</strong><br />
+        <div class="myDIV">
+            <button class="btn active">All</button>
+
+            <button class="btn" type="submit">Artificial Intelligence</button>
+
+
+            <button class="btn">Cloud Computing</button>
+
+
+            <button class="btn">DevOps</button>
+
+
+            <button class="btn">Programming Languages</button>
+
+
+            <button class="btn">Mobile Application Development</button>
+
+
+            <button class="btn">Technology And Tools</button>
+
+
+            <button class="btn">Get a job in a Tech Company</button>
+
+
+            <button class="btn">Others</button>
+
+        </div>
+        <br>
+        <article class="card-container">
+            <a href="#">
+                <div class="card-header">
+                    <img class="card-img"
+                        src="https://edyoda.s3.amazonaws.com/media/blog-images/learn_machine_learning_courses_online.png"
+                        alt="Machine Learning">
+                </div>
+                <div class="card-body">
+                    <div class="card-content">
+                        <p class="card-title">Introduction to a Machine Learning Online Course</p>
+                        <p class="auth-wrapper"><span class="card-author">Edyoda </span>| <span class="card-date">23
+                                Aug
+                                2019</span></p>
+                        <p class="card-desc">
+                            We have had an insight into Artificial Intelligence. Well, one of its subfields is
+                            machine learning and this introduction will help you get a fair idea of what this machine
+                            learning...
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </article>
+        <article class="card-container">
+            <a href="#">
+                <div class="card-header">
+                    <img class="card-img" src="https://edyoda.s3.amazonaws.com/media/blog-images/6.png"
+                        alt="Machine Learning">
+                </div>
+                <div class="card-body">
+                    <div class="card-content">
+                        <p class="card-title">LAMP Stack Vs. MEAN Stac...</p>
+                        <p class="auth-wrapper"><span class="card-author">Edyoda </span>| <span class="card-date">24
+                                Aug
+                                2019</span></p>
+                        <p class="card-desc">
+                            In today's dynamic world. developing a rapid application with a smooth user interface
+                            that can adapt to spacific features is the main business requirment Many organizations..
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </article>
+        <article class="card-container">
+            <a href="#">
+                <div class="card-header">
+                    <img class="card-img" src="https://edyoda.s3.amazonaws.com/media/blog-images/4.png"
+                        alt="Machine Learning">
+                </div>
+                <div class="card-body">
+                    <div class="card-content">
+                        <p class="card-title">Impact of Cloud Computing <br> in various industries</p>
+                        <p class="auth-wrapper"><span class="card-author">Edyoda </span>| <span class="card-date">24
+                                Aug
+                                2019</span></p>
+                        <p class="card-desc">
+                            Cloud computing has been rapidly gaining pace in the world of information techcnology.
+                            it śhas been observed that over 90% of global enterprises are using cloud.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </article>
+        <article class="card-container">
+            <a href="#">
+                <div class="card-header">
+                    <img class="card-img" src="https://edyoda.s3.amazonaws.com/media/blog-images/3.png"
+                        alt="Machine Learning">
+                </div>
+                <div class="card-body">
+                    <div class="card-content">
+                        <p class="card-title">Challenges of Machine Le..... </p>
+                        <p class="auth-wrapper"><span class="card-author">Edyoda </span>| <span class="card-date">24
+                                Aug
+                                2019</span></p>
+                        <p class="card-desc">
+                            Machine learning is a subset of artificial intelligent which is an important part of
+                            computer sccience. The revolution od big data promises to transform the way we work live
+                            and...
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </article>
+        <article class="card-container">
+            <a href="#">
+                <div class="card-header">
+                    <img class="card-img" src="https://edyoda.s3.amazonaws.com/media/blog-images/5.png"
+                        alt="Machine Learning">
+                </div>
+                <div class="card-body">
+                    <div class="card-content">
+                        <p class="card-title">Breaking the Myths around <br>Cybersecurity</p>
+                        <p class="auth-wrapper"><span class="card-author">Edyoda </span>| <span class="card-date">26
+                                Aug
+                                2019</span></p>
+                        <p class="card-desc">
+                            Cybersecurity plays an integral role in the process of goos business models but even
+                            cybersecurity programs built with good intentions can fall short in front of advanced
+                            cyber attacking...
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </article>
+        <article class="card-container">
+            <a href="#">
+                <div class="card-header">
+                    <img class="card-img" src="https://edyoda.s3.amazonaws.com/media/blog-images/7.png"
+                        alt="Machine Learning">
+                </div>
+                <div class="card-body">
+                    <div class="card-content">
+                        <p class="card-title">Importance of Data Backu....</p>
+                        <p class="auth-wrapper"><span class="card-author">Edyoda </span>| <span class="card-date">26
+                                Aug
+                                2019</span></p>
+                        <p class="card-desc">
+                            A business must always introspect the areas where they lack in order to bring about a
+                            positive change in the work environment One of the main precautions or a contingency
+                            plan
+                            th....
+                    </div>
+                </div>
+            </a>
+        </article>
+        <article class="card-container">
+            <a href="#">
+                <div class="card-header">
+                    <img class="card-img"
+                        src="https://edyoda.s3.amazonaws.com/media/blog-images/automation-testing-an-overview-2.png"
+                        alt="Web Scrapping">
+                </div>
+                <div class="card-body">
+                    <div class="card-content">
+                        <p class="card-title">What is Web Scrapping?</p>
+                        <p class="auth-wrapper"><span class="card-author">Zac Clancy</span>| <span class="card-date">25
+                                Sept 2019</span></p>
+                        <p class="card-desc">Simply put, web scraping is one of the tools developers use to gather
+                            and analyze information from the Internet.Some websites and platforms offer application
+                            programming interfaces..
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </article>
+        <article class="card-container">
+            <a href="#">
+                <div class="card-header">
+                    <img class="card-img" src="https://edyoda.s3.amazonaws.com/media/blog-images/what_is_isa_blog_1.png"
+                        alt="Income Share">
+                </div>
+                <div class="card-body">
+                    <div class="card-content">
+                        <p class="card-title">What is Income Share <br> Agreement?</p>
+                        <p class="auth-wrapper"><span class="card-author">Edyoda </span>| <span class="card-date">14
+                                Oct
+                                2019</span></p>
+                        <p class="card-desc">The term Income Share Agreement has been around for a long time since
+                            1955
+                            to be precise. Surprised, eh? It was first introduced by Milton Friedman, an American
+                            economist...
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </article>
+        <article class="card-container">
+            <a href="#">
+                <div class="card-header">
+                    <img class="card-img"
+                        src="https://edyoda.s3.amazonaws.com/media/blog-images/practical_machine_learning_1.png"
+                        alt="Practical_machine_learning">
+                </div>
+                <div class="card-body">
+                    <div class="card-content">
+                        <p class="card-title">Practical Machine Learning <br> with Python and Keras</p>
+                        <p class="auth-wrapper"><span class="card-author">Daniel Pyrathon</span>| <span
+                                class="card-date">16 Oct 2019</span></p>
+                        <p class="card-desc">Machine learning is a field of artificial intelligence that uses
+                            statistical techniques to give computer systems the ability to “learn” (e.g.,
+                            progressively improve performance on a specific..
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </article>
+    </main>
+
+</body>
+<footer>
+    <p>
+
+    </p>
+</footer>
+</html>
